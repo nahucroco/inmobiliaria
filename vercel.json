@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "proyectoinmobiliaria/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python 3.11" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "proyectoinmobiliaria/wsgi.py"
+        }
+    ]
+}
